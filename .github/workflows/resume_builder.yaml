@@ -1,3 +1,6 @@
+# Well i wanted to disable auto generated source code zips/tar.gz but the issue still exists
+# https://github.com/orgs/community/discussions/6003
+
 name: Resume builder
 
 on:
