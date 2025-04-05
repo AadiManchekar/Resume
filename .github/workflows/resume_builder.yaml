@@ -49,5 +49,6 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        title: Resumes
+        title: Aadi-Manchekar
         workdir: Resumes
+        tag: Resume
