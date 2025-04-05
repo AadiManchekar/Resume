@@ -43,6 +43,11 @@ jobs:
     - name: List files in Resumes directory
       run: ls Resumes
 
+    - name: Delete existing release
+      uses: liudonghua123/delete-release-action@v1
+      with:
+        release_name: 'latest'
+
     - name: Create a Release
       uses: elgohr/Github-Release-Action@v5
       env:
