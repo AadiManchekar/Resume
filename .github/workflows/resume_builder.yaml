@@ -45,6 +45,8 @@ jobs:
 
     - name: Delete existing release
       uses: liudonghua123/delete-release-action@v1
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         release_name: 'latest'
 
