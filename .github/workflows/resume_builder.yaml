@@ -43,11 +43,10 @@ jobs:
     - name: List files in Resumes directory
       run: ls Resumes
 
-    - name: Delete existing release
-      uses: liudonghua123/delete-release-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        release_name: 'latest'
+    - name: Delete tag
+      run: gh release delete Aadi-Manchekar --cleanup-tag
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Create a Release
       uses: elgohr/Github-Release-Action@v5
