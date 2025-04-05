@@ -2,6 +2,12 @@ name: Resume builder
 
 on:
   push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
 
 
 jobs:
@@ -45,10 +51,3 @@ jobs:
       with:
         title: Resumes
         workdir: Resumes
-    # - name: Upload PDFs
-    #   uses: actions/upload-artifact@v4.6.2
-    #   with:
-    #     name: resumes
-    #     path: |
-    #       latex/*.pdf
-
