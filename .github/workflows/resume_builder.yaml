@@ -3,6 +3,7 @@ name: Resume builder
 on:
   push:
 
+
 jobs:
   build-resumes:
     runs-on: ubuntu-latest
@@ -28,9 +29,26 @@ jobs:
     - name: List files in latex directory
       run: ls latex
 
-    - name: Upload PDFs
-      uses: actions/upload-artifact@v4.6.2
+    - name: Create Resumes subfolder and move PDFs
+      run: |
+        mkdir -p Resumes
+        mv latex/*.pdf Resumes/
+
+    - name: List files in Resumes directory
+      run: ls latex/Resumes
+
+    - uses: actions/checkout@v3
+    - name: Create a Release
+      uses: elgohr/Github-Release-Action@v5
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: resumes
-        path: |
-          latex/*.pdf
+        title: Resumes
+        workdir: latex/Resumes
+    # - name: Upload PDFs
+    #   uses: actions/upload-artifact@v4.6.2
+    #   with:
+    #     name: resumes
+    #     path: |
+    #       latex/*.pdf
+
