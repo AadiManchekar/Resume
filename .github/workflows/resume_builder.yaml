@@ -35,7 +35,7 @@ jobs:
         mv latex/*.pdf Resumes/
 
     - name: List files in Resumes directory
-      run: ls latex/Resumes
+      run: ls Resumes
 
     - uses: actions/checkout@v3
     - name: Create a Release
@@ -44,7 +44,7 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         title: Resumes
-        workdir: latex/Resumes
+        workdir: Resumes
     # - name: Upload PDFs
     #   uses: actions/upload-artifact@v4.6.2
     #   with:
