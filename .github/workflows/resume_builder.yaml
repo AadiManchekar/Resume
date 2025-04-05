@@ -1,0 +1,36 @@
+name: Resume builder
+
+on:
+  push:
+
+jobs:
+  build-resumes:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Compile LaTeX
+      uses: xu-cheng/latex-action@v3
+      with:
+        workdir: latex
+        root_file: "*.tex"
+
+    - name: List files in latex directory
+      run: ls latex
+
+    - name: Rename PDF files
+      run: |
+        for file in latex/*.pdf; do
+          mv "$file" "latex/aadi_manchekar_$(basename "$file")"
+        done
+
+    - name: List files in latex directory
+      run: ls latex
+
+    - name: Upload PDFs
+      uses: actions/upload-artifact@v4.6.2
+      with:
+        name: resumes
+        path: |
+          latex/*.pdf
