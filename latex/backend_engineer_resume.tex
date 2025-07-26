@@ -1,0 +1,173 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\LARGE \scshape Aadi Manchekar} \\ \vspace{1pt}
+    \small
+    \raisebox{-0.1\height}{\faPhone}~+91 9372940638 ~
+    \href{mailto:aadimanchekar2002@gmail.com}{\raisebox{-0.2\height}{\faEnvelope}~aadimanchekar2002@gmail.com} ~
+    \href{https://www.linkedin.com/in/aadi-manchekar-b07458325/}{\raisebox{-0.2\height}{\faLinkedin}~linkedin.com/in/aadi-manchekar-b07458325}
+    \\[2pt]
+    \small
+    \href{https://github.com/AadiManchekar}{\raisebox{-0.2\height}{\faGithub}~github.com/AadiManchekar} ~
+    \href{https://leetcode.com/u/System\_Debt/}{\raisebox{-0.2\height}{\faCode}~leetcode.com/u/System\_Debt}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology}{Vellore, Tamil Nadu}
+      {Bachelor of Technology in Information Technology \textbar\ CGPA: 8.7}{Jul 2019 -- May 2023}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {HPE Aruba Networking}{Bangalore, Karnataka}
+      {Cloud Engineer I}{Aug 2023 - Present}
+      \resumeItemListStart
+        \item \small{\textbf{CNX-LITE}}
+        \begin{itemize}
+            \resumeItem{Led an \textbf{engineering team} in architecting and implementing \textbf{CNX-Lite}, a \textbf{Kubernetes-based} development environment enabling \textbf{850+ engineers} to provision isolated K8s clusters hosting microservices for the \textbf{HPE Aruba Networking Next Generation Central}, accelerating \textbf{release cycles}}
+            \resumeItem{Owned and managed critical infrastructure components such as \textbf{HashiCorp Vault}, \textbf{Consul}, and \textbf{ingress-nginx}, ensuring secure \textbf{secrets management}, \textbf{service discovery}, and \textbf{traffic routing}}
+            \resumeItem{Achieved significant \textbf{cost optimization} by deploying only device-specific microservices, rightsizing clusters, and optimizing base OS images, resulting in a \textbf{22\% and 36\% cost reduction} compared to legacy environments (central-lite, gravity-lite)}
+            \resumeItem{Reduced environment creation time by \textbf{44\%} (from \textbf{80 to 45 minutes}) through reordering execution steps, rightsizing \textbf{K8s clusters}, and caching artifacts locally}
+            \resumeItem{Authored comprehensive \textbf{documentation} for developers, accelerating adoption and reducing \textbf{support overhead}}
+        \end{itemize}
+        \item \small{\textbf{ADP (App Developer Portal) & ASP (App Support Portal)}}
+        \begin{itemize}
+            \resumeItem{Led and owned full ownership of \textbf{ADP} and \textbf{ASP}, critical internal portals supporting \textbf{development} and \textbf{administrative workflows} for \textbf{edge-based IoT applications}}
+            \resumeItem{Implemented advanced features such as \textbf{Docker container image upload} (supporting both \textbf{URL} and \textbf{tar-based uploads}), \textbf{beta app management}, and automated \textbf{email notifications} for workflow events}
+            \resumeItem{Successfully executed \textbf{Spring Boot upgrades} across both platforms}
+        \end{itemize}
+        \item \small{\textbf{IoT Operations}}
+        \begin{itemize}
+            \resumeItem{Contributed to \textbf{10+ microservices} powering \textbf{HPE Aruba Networking's IoT Operations platform}, building and enhancing features at scale}
+            \resumeItem{Architected and implemented a scalable \textbf{"App Statistics" feature}, enabling \textbf{edge devices} to transmit IoT application statistical \textbf{telemetry} to the \textbf{cloud} for \textbf{real-time analytics} and monitoring}
+            \resumeItem{Fostered \textbf{cross-functional collaboration} with \textbf{QA}, \textbf{product managers}, and \textbf{engineering teams} to deliver \textbf{high-impact features} and resolve \textbf{production issues}}
+        \end{itemize}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+   \resumeSubSubheading
+    {Research and Development Intern}{Jan 2023 - Jul 2023}
+    \resumeItemListStart
+       \resumeItem{Maintained \textbf{central-lite}, an internal Kubernetes-based development platform enabling engineers to provision isolated K8s clusters hosting \textbf{350+ microservices} powering \textbf{HPE Aruba Networking Central}}
+       \resumeItem{Delivered stable \textbf{version releases (v254–v258)} of \textbf{central-lite} through collaboration with cross-functional \textbf{teams across multiple geographical locations}, coordinating infrastructure upgrades and microservice version promotions leveraging effective \textbf{company-wide communication}}
+       \resumeItem{Optimized build automation scripts to achieve \textbf{20\% reduction} in environment creation time by implementing shallow Git clones and local file caching, improving performance and reducing \textbf{network I/O costs}}
+       \resumeItem{Built a \textbf{CI pipeline} for onboarding scripts to integrate central-lite with HPE GreenLake, enabling \textbf{auto-triggered image builds} on PRs/commits, significantly improving \textbf{release velocity}}
+       \resumeItem{Architected a \textbf{disaster-recovery solution} for \textbf{Jenkins server backups} using \textbf{Kopia} and \textbf{Amazon S3}, with automated backup schedules (weekly, bi-monthly, semi-annual, annual), and authored comprehensive \textbf{backup and restore runbooks}}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages \& Frameworks}{: Java, Python, C/C++, Shell Script, SQL, Spring Boot} \\
+    \textbf{Tools \& Platforms}{: Docker, Kubernetes, Google Cloud Platform, Amazon Web Services}
+    }}
+ \end{itemize}
+
+%------------Letters of Recommendation------------
+\section{Recommendations}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \small{
+        \href{https://your-link-here.com}{\textbf{Sachin Sanap}, Director of Engineering at HPE Aruba Networking}
+    }
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
