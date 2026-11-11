@@ -1,0 +1,185 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\LARGE \scshape Aadi Manchekar} \\ \vspace{1pt}
+    \small
+    \raisebox{-0.1\height}{\faPhone}~+91 9372940638 ~
+    \href{mailto:aadimanchekar2002@gmail.com}{\raisebox{-0.2\height}{\faEnvelope}~aadimanchekar2002@gmail.com} ~
+    \href{https://www.linkedin.com/in/aadimanchekar/}{\raisebox{-0.2\height}{\faLinkedin}~linkedin.com/in/aadimanchekar}
+    \\[2pt]
+    \small
+    \href{https://github.com/AadiManchekar}{\raisebox{-0.2\height}{\faGithub}~github.com/AadiManchekar} ~
+    \href{https://leetcode.com/u/AadiManchekar/}{\raisebox{-0.2\height}{\faCode}~leetcode.com/u/AadiManchekar}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {HPE Aruba Networking}{Bangalore, Karnataka}
+        {Cloud Developer II}{June 2026 - Present}
+        \resumeItemListStart
+        \item \small{\textbf{*-lites}}
+        \begin{itemize}
+            \resumeItem{Built a POC, now running in live *-lites, that caches \textbf{OCI container images} using a \textbf{Google Artifact Registry} remote repository, \textbf{Cloud Scheduler}, \textbf{Cloud Functions}, and \textbf{Secret Manager}. It saves \textbf{\$24,000 a year} in \textbf{NAT ingress} charges.}
+            \resumeItem{Removed all \textbf{imagePullSecrets} from the clusters, which shrank the \textbf{attack surface}.}
+        \end{itemize}
+        \item \small{\textbf{5G Bridge}}
+        \begin{itemize}
+            \resumeItem{Implemented \textbf{7+ Bridge alerts} with the alerts team, state-based (offline, reboot, firmware upgrade) and stats-based (CPU, memory, RSRP, RSRQ).}
+            \resumeItem{Implemented \textbf{alert-driven} Bridge device \textbf{health} using \textbf{Kafka Streams}, \textbf{state stores} and \textbf{punctuators}.}
+            \resumeItem{Implemented the Bridge device \textbf{site movement} feature, covering various device states.}
+        \end{itemize}
+        \item \small{\textbf{EdgeVM}}
+        \begin{itemize}
+            \resumeItem{Implemented EdgeVM \textbf{monitoring} features like device \textbf{health}, \textbf{uptime}, and \textbf{lastSeen}.}
+            \resumeItem{Implemented \textbf{alerts} for EdgeVM.}
+        \end{itemize}
+        \resumeItemListEnd
+        \resumeSubSubheading
+        {Cloud Developer I}{Jan 2023 - May 2026}
+        \resumeItemListStart
+        \item \small{\textbf{CNX-Lite}}
+        \begin{itemize}
+            \resumeItem{Led an \textbf{engineering team} building \textbf{CNX-Lite}, a \textbf{Kubernetes-based} dev environment where each cluster runs its own \textbf{HPE Aruba Networking Next Generation Central}, giving each of \textbf{850+ engineers} an isolated copy.}
+            \resumeItem{Owned \textbf{HashiCorp Vault}, \textbf{Consul}, and \textbf{ingress-nginx} for \textbf{secrets}, \textbf{service discovery}, and \textbf{routing}.}
+            \resumeItem{Cut cost by \textbf{22\% and 36\%} against legacy *-lites by deploying only device-specific microservices.}
+            \resumeItem{Reduced environment creation time by \textbf{44\%} (\textbf{80 to 45 minutes}) by reordering steps and caching artifacts locally.}
+        \end{itemize}
+        \item \small{\textbf{Central-Lite}}
+        \begin{itemize}
+            \resumeItem{Maintained \textbf{Central-Lite} (\textbf{350+ microservices}) and cut environment creation time by \textbf{20\%} with shallow Git clones and local caching.}
+            \resumeItem{Built a \textbf{CI pipeline} to onboard Central-Lite onto \textbf{HPE GreenLake}, speeding up \textbf{releases}.}
+            \resumeItem{Set up \textbf{disaster recovery} for \textbf{Jenkins} with \textbf{Kopia} and \textbf{Amazon S3}, plus restore runbooks.}
+        \end{itemize}
+        \item \small{\textbf{ADP (App Developer Portal) \& ASP (App Support Portal)}}
+        \begin{itemize}
+            \resumeItem{Owned \textbf{ADP} and \textbf{ASP}, portals for developing and managing \textbf{47+ IoT applications}.}
+            \resumeItem{Built \textbf{container image upload} (URL and TAR) with \textbf{AWS S3} and \textbf{Lambdas}, plus beta app management.}
+        \end{itemize}
+        \item \small{\textbf{IoT Operations}}
+        \begin{itemize}
+            \resumeItem{Built features across \textbf{10+ microservices} serving \textbf{15K+ IoT connectors}.}
+            \resumeItem{Shipped \textbf{App Statistics}, streaming IoT app telemetry from \textbf{edge devices} for \textbf{real-time analytics}.}
+        \end{itemize}
+        \resumeItem{Mentored \textbf{3 junior engineers}.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages \& Frameworks}{: Java, Python, C/C++, Shell Script, Spring Boot, GraphQL} \\
+    \textbf{Databases}{: SQL, NoSQL, PostgreSQL, Redis, Cassandra, ArangoDB} \\
+    \textbf{Tools \& Platforms}{: Docker, Kubernetes, Kafka, Kafka Streams, Jenkins, Git, GCP, AWS}
+    }}
+ \end{itemize}
+
+%------------Letters of Recommendation------------
+\section{Recommendations}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \small{
+        \href{https://www.linkedin.com/in/aadimanchekar/details/recommendations}{\textbf{Sachin Sanap}, Director of Engineering at HPE Aruba Networking}
+    }
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology}{Vellore, Tamil Nadu}
+      {Bachelor of Technology in Information Technology \textbar\ CGPA: 8.7}{Jul 2019 -- May 2023}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
